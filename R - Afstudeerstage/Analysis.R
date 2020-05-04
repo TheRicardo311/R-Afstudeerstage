@@ -1,7 +1,10 @@
 source("getData.R")
 #bookingData <- getBookingData()
-eventData <- getEventData()
+#eventData <- getEventData()
+bookingDateData <- getBookingDateData()
 
-
+write.csv(bookingDateData, file = 'Booking-date-data.csv')
 #write.csv(bookingData, file = 'booking-data.csv')
-write.csv(eventData, file = 'event-data.csv')
+#write.csv(format(eventData[11], "%d/%m/%Y"), file = 'event-data.csv')
+#write.csv(eventData[5], file = 'event-data1.csv')
+#write.csv(eventData, file = 'event-data1.csv')
