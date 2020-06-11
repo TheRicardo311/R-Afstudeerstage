@@ -1,10 +1,31 @@
+library("tidyverse")
+
 source("getData.R")
 #bookingData <- getBookingData()
 #eventData <- getEventData()
-bookingDateData <- getBookingDateData()
+eventDateData <- getEventDateData()
+eventTimeData <- getEventTimeData()
 
-write.csv(bookingDateData, file = 'Booking-date-data.csv')
-#write.csv(bookingData, file = 'booking-data.csv')
-#write.csv(format(eventData[11], "%d/%m/%Y"), file = 'event-data.csv')
-#write.csv(eventData[5], file = 'event-data1.csv')
-#write.csv(eventData, file = 'event-data1.csv')
+#eventTimeDataFilled <- function(dataTable) {
+#  if(nrow(dataTable) == 0){
+#    datayn <- 0
+#    return(datayn)
+#  } else { 
+#    datayn <- 1
+#    return(datayn)
+#  }
+#}
+
+
+
+#filteredData <- eventTimeDataFilled(eventTimeData)
+#print(filteredData)
+
+write.csv(eventDateData, file = 'event-date-data.csv')
+#write.csv(format(eventDateData[4], format="%y/%m/%d"), file = 'Booking-date-data.csv')
+
+#finish <- format(bookingDateData[4], format="%d/%B/%Y")
+#start <- format(bookingDateData[3], format="%d/%B/%Y")
+#diff <- finish - start
+
+
